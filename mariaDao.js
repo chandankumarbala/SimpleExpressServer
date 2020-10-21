@@ -9,7 +9,7 @@ const getAllStudents=async ()=>{
     let data=new Array();
     try{
          connection=await pool.getConnection();
-         const rows=await connection.query("select * from npm_mariadb.student");
+         const rows=await connection.query("select * from student");
          console.log(rows);
          rows.map((item)=>{
             data.push(item);
